@@ -39,11 +39,11 @@
 (use-package mu4e-config
   :ensure nil)
 
-;;(require 'flycheck-config)
-;;(require 'gitignore-config)
-;;(require 'indent-config)
-;;(require 'haskell-config)
-;;(require 'pdf-config)
+(require 'flycheck-config)
+(require 'gitignore-config)
+(require 'indent-config)
+(require 'haskell-config)
+(require 'pdf-config)
 
  
 ;;; init.el ends here
