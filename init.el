@@ -16,9 +16,6 @@
  )
 
 
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -39,6 +36,7 @@
 (use-package mu4e-config
   :ensure nil)
 
+(require 'general-config)
 (require 'flycheck-config)
 (require 'gitignore-config)
 (require 'indent-config)

@@ -1,3 +1,4 @@
 /elpa/
 *.elc
 /local/
+/auto-save-list/
