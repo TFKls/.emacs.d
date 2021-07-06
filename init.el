@@ -7,7 +7,7 @@
  '(haskell-stylish-on-save t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
+   '(markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,16 +32,22 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/local/")
+(add-to-list 'load-path "~/.emacs.d/lang/")
 
+;;; GENERAL PACKAGES
+(require 'general-config)
+(require 'flycheck-config)
+(require 'indent-config)
+
+;;; LOCAL PACKAGES
 (use-package mu4e-config
   :ensure nil)
 
-(require 'general-config)
-(require 'flycheck-config)
-(require 'gitignore-config)
-(require 'indent-config)
+;;; LANG PACKAGES
 (require 'haskell-config)
 (require 'pdf-config)
+(require 'gitignore-config)
+(require 'markdown-config)
 
  
 ;;; init.el ends here
