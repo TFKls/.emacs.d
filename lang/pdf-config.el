@@ -9,5 +9,8 @@
   (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward)
   :custom
   (pdf-annot-activate-created-annotations t "automatically annotate highlights"))
+
+(setq-default doc-view-continuous t)
+
 (provide 'pdf-config)
 ;;; pdf-config.el ends here
