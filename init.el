@@ -19,13 +19,14 @@
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+(when (version< emacs-version "27.0") (package-initialize))
 
 ;;; Ensures that use-package exists
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+
 (eval-when-compile
   (require 'use-package))
 
@@ -38,6 +39,7 @@
 (require 'general-config)
 (require 'flycheck-config)
 (require 'indent-config)
+(require 'profiler)
 
 ;;; LOCAL PACKAGES
 (use-package mu4e-config

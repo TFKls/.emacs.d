@@ -2,6 +2,7 @@
 (use-package pdf-tools
   :ensure t
   :pin manual
+  :mode ("\\.pdf\\'" . doc-view-mode)
   :config
   (pdf-tools-install)
   (setq-default pdf-view-display-size 'fit-width)
