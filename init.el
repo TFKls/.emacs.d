@@ -7,7 +7,7 @@
  '(haskell-stylish-on-save t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
+   '(yaml-mode dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -53,6 +53,7 @@
 (require 'pdf-config)
 (require 'gitignore-config)
 (require 'markdown-config)
+(require 'yaml-config)
 
  
 ;;; init.el ends here
