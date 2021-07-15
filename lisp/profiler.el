@@ -1,3 +1,5 @@
+(require 'use-package)
+
 (use-package esup
   :ensure t
   :pin melpa

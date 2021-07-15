@@ -7,7 +7,7 @@
  '(haskell-stylish-on-save t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
+   '(dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -39,10 +39,13 @@
 (require 'general-config)
 (require 'flycheck-config)
 (require 'indent-config)
+(require 'company-config)
 (require 'profiler)
 
 ;;; LOCAL PACKAGES
 (use-package mu4e-config
+  :ensure nil)
+(use-package local-config
   :ensure nil)
 
 ;;; LANG PACKAGES
