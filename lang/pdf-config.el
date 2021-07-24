@@ -1,7 +1,8 @@
 (require 'use-package)
+
 (use-package pdf-tools
+  :if window-system
   :ensure t
-  :pin manual
   :mode ("\\.pdf\\'" . doc-view-mode)
   :config
   (pdf-tools-install)
