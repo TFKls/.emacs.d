@@ -49,6 +49,7 @@
 (require 'company-config)
 (require 'clipboard-config)
 (require 'profiler)
+(require 'utilities)
 
 ;;; LOCAL PACKAGES
 (use-package mu4e-config
