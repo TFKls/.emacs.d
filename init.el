@@ -11,7 +11,7 @@
  '(haskell-stylish-on-save t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(xclip rebecca-theme esup company yaml-mode dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck))
+   '(emacs-everywhere xclip rebecca-theme esup company yaml-mode dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck))
  '(xterm-mouse-mode t)
  '(xterm-mouse-utf-8 t))
 (custom-set-faces
@@ -48,6 +48,7 @@
 (require 'indent-config)
 (require 'company-config)
 (require 'clipboard-config)
+;; (require 'everywhere-config) doesn't work as expected :(
 (require 'profiler)
 (require 'utilities)
 
