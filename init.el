@@ -10,8 +10,9 @@
    '("e208e45345b91e391fa66ce028e2b30a6aa82a37da8aa988c3f3c011a15baa22" default))
  '(haskell-stylish-on-save t)
  '(inhibit-startup-screen t)
+ '(org-support-shift-select 'always)
  '(package-selected-packages
-   '(emacs-everywhere xclip rebecca-theme esup company yaml-mode dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck))
+   '(org-mime emacs-everywhere xclip rebecca-theme esup company yaml-mode dante company-mode markdown-mode pdf-tools flycheck-haskell haskell-mode use-package mu4e-alert gitignore-templates gitignore-mode flycheck))
  '(xterm-mouse-mode t)
  '(xterm-mouse-utf-8 t))
 (custom-set-faces
@@ -48,22 +49,20 @@
 (require 'indent-config)
 (require 'company-config)
 (require 'clipboard-config)
-;; (require 'everywhere-config) doesn't work as expected :(
+(require 'everywhere-config)
 (require 'profiler)
 (require 'utilities)
 
 ;;; LOCAL PACKAGES
-(use-package mu4e-config
-  :when (require 'mu4e-config nil 'noerror))
-(use-package local-config
-  :when (require 'local-config nil 'noerror))
+(require 'mu4e-config nil 'noerror)
+(require 'local-config nil 'noerror)
 
 ;;; LANG PACKAGES
+(require 'org-config)
 (require 'haskell-config)
 (require 'pdf-config)
 (require 'gitignore-config)
 (require 'markdown-config)
 (require 'yaml-config)
-
  
 ;;; init.el ends here

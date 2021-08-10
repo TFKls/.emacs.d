@@ -5,6 +5,7 @@
 (defvar-local local-hoogle-instance "http://localhost:9331/")
 
 ;; Partially adapted from https://github.com/soupi/minimal-haskell-emacs
+;; Luckly also UNLICENSED :D
 
 (use-package haskell-mode
   :ensure t)

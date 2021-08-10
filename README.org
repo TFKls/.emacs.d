@@ -1,0 +1,14 @@
+#+title: .emacs.d
+#+subtitle: my emacs configuration files
+
+This is the repository where I keep my emacs configuration files.
+These files should be portable (install on any working emacs),
+but may not work on not the newest major versions of emacs (27 currently).
+
+If you encounter some issue with portability, feel free to submit an issue,
+I may or may not silently ignore you. :3
+
+* License
+  The files under this repository are licensed under the UNLICENSE,
+  unless explicitly stated otherwise in the file (might be the case
+  in the future if some code is copied from other people).
