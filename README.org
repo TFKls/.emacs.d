@@ -1,14 +1,19 @@
 #+title: .emacs.d
-#+subtitle: my emacs configuration files
 
-This is the repository where I keep my emacs configuration files.
-These files should be portable (install on any working emacs),
-but may not work on not the newest major versions of emacs (27 currently).
+This is the repository where I keep my emacs configuration files.  
+These files should be portable (install on any working emacs), but may not work on not the newest major versions of emacs (27 currently).
 
-If you encounter some issue with portability, feel free to submit an issue,
-I may or may not silently ignore you. :3
+If you encounter some issue with portability, feel free to submit an issue, I may or may not silently ignore you. :3
+** Requirements
+   You may need some additional stuff preinstalled on the system for this to work correctly.  
+   Specifically, you need to have the correct fonts installed on your system.
+   Please check the source code to see the fonts being used (didn't put them here because they
+   will probably change and I will be too lazy to update this readme) :O
 
-* License
+** License   
   The files under this repository are licensed under the UNLICENSE,
   unless explicitly stated otherwise in the file (might be the case
   in the future if some code is copied from other people).
+  Do note, that some packages and emacs are licensed under the GNU GPL licenses,
+  and potentially others.
+  
