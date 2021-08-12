@@ -6,7 +6,7 @@
 (use-package org
   :ensure t
   :if window-system
-  :init
+  :config
   (setq org-hide-emphasis-markers t)
   (add-hook 'org-mode-hook 'visual-line-mode)
   (let* ((variable

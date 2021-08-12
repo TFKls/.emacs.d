@@ -71,6 +71,7 @@
 (require 'company-config)
 (require 'clipboard-config)
 (require 'everywhere-config)
+(require 'ligature-config)
 (require 'profiler)
 (require 'utilities)
 
