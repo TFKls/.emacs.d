@@ -2,3 +2,4 @@
 *.elc
 /local/
 /auto-save-list/
+session.*

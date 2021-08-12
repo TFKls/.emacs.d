@@ -4,16 +4,19 @@ This is the repository where I keep my emacs configuration files.
 These files should be portable (install on any working emacs), but may not work on not the newest major versions of emacs (27 currently).
 
 If you encounter some issue with portability, feel free to submit an issue, I may or may not silently ignore you. :3
+
 ** Requirements
    You may need some additional stuff preinstalled on the system for this to work correctly.  
    Specifically, you need to have the correct fonts installed on your system.
-   Please check the source code to see the fonts being used (didn't put them here because they
-   will probably change and I will be too lazy to update this readme) :O
-
+   Currenty, I'm using IOsevka, a custom built version of [[https://github.com/be5invis/iosevka][Iosevka]].  
+   You will most likely want to change the fonts (they are specified at
+   [[lang/org-config.el]] and [[lisp/general-config.el]].  
+   Also note, that you may need to disable ligatures, although I'm not certain.
+   
 ** License   
   The files under this repository are licensed under the UNLICENSE,
   unless explicitly stated otherwise in the file (might be the case
   in the future if some code is copied from other people).
-  Do note, that some packages and emacs are licensed under the GNU GPL licenses,
-  and potentially others.
+  Do note, that some packages and emacs are licensed under the GNU GPL licenses, and potentially others.  
+  Also, submodules may be used to pull in packages not available on elpa/melpa. In that scenario, the licensing rules of the repositories apply.
   
