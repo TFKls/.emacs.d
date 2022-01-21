@@ -1,7 +1,7 @@
-(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; If there is more than one, they won't work right.
+(custom-set-variables
  '(ansi-color-names-vector
 	 ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(custom-enabled-themes nil)
@@ -49,7 +49,7 @@
 
 (set-face-attribute 'default nil
                     :family "IOsevkaT"
-										:height 115
+                    :height 115
                     :weight 'normal
                     :width 'normal)
 
@@ -58,10 +58,6 @@
 (setq gc-cons-threshold 4000000) ;; 10*def
 (setq read-process-output-max (* 1024 1024)) ;; 1MB
 (setq-default tab-width 2)
-
-(use-package undo-tree
-	:ensure t
-	:init (global-undo-tree-mode))
 
 (use-package rebecca-theme
   :ensure t
@@ -91,9 +87,44 @@
 (load "~/.emacs.d/ergoemacs-mode/ergoemacs-mode.el")
 (setq-default ergoemacs-theme nil)
 (setq-default ergoemacs-keyboard-layout "us")
+
+;; Things I still miss about classic Emacs
+(define-key ergoemacs-user-keymap (kbd "C-f") 'search-forward)
+(define-key ergoemacs-user-keymap (kbd "C-S-f") 'search-forward-regexp)
+(define-key ergoemacs-user-keymap (kbd "C-r") 'search-backward)
+(define-key ergoemacs-user-keymap (kbd "C-S-r") 'search-backward-regexp)
+(define-key ergoemacs-user-keymap (kbd "C-x C-s") 'save-buffer)
+(define-key ergoemacs-user-keymap (kbd "C-b") 'switch-to-buffer)
+(define-key ergoemacs-user-keymap (kbd "C-/") 'undo-tree-undo)
+(define-key ergoemacs-user-keymap (kbd "C-S-/") 'undo-tree-redo)
+
+;; Rebinding stuff lost from the above keybinds
+(define-key ergoemacs-user-keymap (kbd "C-S-b") 'revert-buffer)
+
+
+
 (ergoemacs-mode 1)
 
-;;; LANG PACKAGES
+
+(use-package undo-tree
+	:ensure t)
+
+;; (global-undo-tree-mode) ; Doesn't work for some reason ¯\_(ツ)_/¯
+
+(define-globalized-minor-mode tfk-global-undo-tree-mode
+  undo-tree-mode (lambda () (undo-tree-mode 1)))
+(tfk-global-undo-tree-mode 1)
+
+
+(use-package which-key
+  :ensure t)
+
+(define-globalized-minor-mode global-which-key-mode
+  which-key-mode (lambda () (which-key-mode 1)))
+
+(global-which-key-mode 1)			  
+
+
 ;; (require 'erlang-config)
 ;; (require 'elixir-config)
 ;; (require 'haskell-config)
