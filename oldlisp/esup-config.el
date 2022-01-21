@@ -7,5 +7,5 @@
   (setq esup-depth 0)
   )
 
-(provide 'profiler)
-;;; profiler.el ends here
+(provide 'esup-config)
+;;; esup-config.el ends here

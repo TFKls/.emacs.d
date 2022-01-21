@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: fastio
+# key: fio
+# --
+
+`(progn (goto-char (point-min)) (unless (re-search-forward
+"^using\\s-+namespace std;" nil 'no-error) "std::"))
+`ios_base::sync_with_stdio(false);
+`(progn (goto-char (point-min)) (unless (re-search-forward
+"^using\\s-+namespace std;" nil 'no-error) "std::"))
+`cin.tie(nullptr);

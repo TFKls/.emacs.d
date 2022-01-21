@@ -1,3 +1,7 @@
 [submodule "extern/ligature"]
 	path = extern/ligature
 	url = https://github.com/mickeynp/ligature.el.git
+[submodule "ergoemacs-mode"]
+	path = ergoemacs-mode
+	url = https://github.com/ergoemacs/ergoemacs-mode
+	branch = master

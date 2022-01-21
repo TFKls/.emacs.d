@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: satori
+# key: sat
+# --
+
+#include <cstdio>
+
+// #define DEBUG_M
+#ifdef DEBUG_M
+	#define DEBUGF(...) printf(stderr, __VA_ARGS__)
+	#define DEBUG(expr) expr
+#else
+	#define DEBUGF(...)
+	#define DEBUG(expr)
+#endif
+
+using namespace std;
+
+int main() {
+	int z;
+	scanf(" %d", &z);
+	for (;z--;) {
+		$0
+	}
+}
